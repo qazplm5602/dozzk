@@ -14,7 +14,10 @@
         </a>
     </section>
 
-    <div><input type="text"></div>
+    <div class="search-main">
+        <input type="text">
+        <img src="<?php echo DOZZK_URL; ?>/assets/search.svg">
+    </div>
 
     <section class="right-menu">
         <a href="https://domi.kr/bbs/login.php"><button class="text-button">로그인</button></a>
