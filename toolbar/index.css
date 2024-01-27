@@ -1,0 +1,96 @@
+.toolbar-main {
+    position: fixed;
+
+    top: 60px;
+    left: 0;
+
+    width: 240px;
+    height: calc(100% - 60px);
+
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+
+    padding: 0 15px;
+    padding-top: 10px;
+}
+
+.toolbar-main > .category-text {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toolbar-main > .category-text > span {
+    color: #697183;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.toolbar-main > .category-text.category-button {
+    cursor: pointer;
+}
+
+.toolbar-main > .category-text.category-button > .container {
+    padding: 1px;
+    border-radius: 8px;
+}
+
+.toolbar-main > .category-text.category-button:hover > .container {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toolbar-main > .category-text.category-button > .container > img {
+    opacity: 0.3;
+}
+
+.toolbar-main > .category-text.category-button:hover > .container > img {
+    opacity: 0.8;
+}
+
+.toolbar-main > .category-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+
+    margin: 10px 0;
+}
+
+.toolbar-main > .link-button {
+    text-decoration-line: none;
+}
+
+.toolbar-main > .link-button > button {
+    width: 100%;
+    height: 35px;
+    
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 5px 5px;
+
+    border-radius: 8px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.toolbar-main > .link-button:hover > button {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toolbar-main > .link-button > button > img {
+    height: 100%;
+    margin-right: 5px;
+}
+
+.toolbar-main > .link-button > button > div {
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    font-weight: 600;
+}
