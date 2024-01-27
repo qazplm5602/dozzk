@@ -44,4 +44,27 @@
     top: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    width: 350px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+
+    padding: 6px 13px;
+    
+    display: flex;
+}
+
+.header-main > .search-main > input {
+    color: white;
+    font-size: 15px;
+    flex-grow: 1;
+
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.header-main > .search-main > img {
+    cursor: pointer;
 }

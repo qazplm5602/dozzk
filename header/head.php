@@ -15,7 +15,7 @@
     </section>
 
     <div class="search-main">
-        <input type="text">
+        <input placeholder="스트리머, 게임 영상 검색" type="text">
         <img src="<?php echo DOZZK_URL; ?>/assets/search.svg">
     </div>
 
