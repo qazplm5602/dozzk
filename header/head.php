@@ -10,7 +10,7 @@
 <header class="header-main">
     <section class="left-menu">
         <a href="https://dozzk.domi.kr">
-            <img src="https://domi.kr/img/logo.png" alt="">
+            <img src="<?php echo DOZZK_URL; ?>/assets/logo.png" alt="">
         </a>
     </section>
 
