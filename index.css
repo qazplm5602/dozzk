@@ -6,3 +6,10 @@ body {
 }
 
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+.screen_container {
+    width: 100%;
+    padding-left: 250px;
+    
+    box-sizing: border-box;
+}

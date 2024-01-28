@@ -1,0 +1,7 @@
+.screen_container {
+    display: flex;
+}
+
+.live-wrapper {
+    flex-grow: 1;
+}

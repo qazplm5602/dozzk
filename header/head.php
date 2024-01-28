@@ -6,6 +6,7 @@
 
     echo '<link rel="stylesheet" href="'.DOZZK_URL.'/header/header.css">';
 ?>
+<title>도지직 - DOZZK</title>
 
 <header class="header-main">
     <section class="left-menu">
