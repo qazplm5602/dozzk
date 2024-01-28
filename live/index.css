@@ -1,7 +1,165 @@
 .screen_container {
-    display: flex;
+    /* display: flex; */
+    padding-right: 300px;
 }
 
-.live-wrapper {
+/* .live-wrapper {
     flex-grow: 1;
+} */
+
+.chat-wrapper {
+    position: fixed;
+
+    right: 0;
+    top: 60px;
+
+    width: 300px;
+    height: calc(100% - 60px);
+}
+
+.screen_container .live-video {
+    width: 100%;
+    /* max-height: 500px; */
+
+    object-fit: contain;
+}
+
+.screen_container > .info-container {
+    width: 100%;
+
+    padding: 13px 15px;
+    box-sizing: border-box;
+}
+
+.screen_container > .info-container > .info-title {
+    font-size: 23px;
+    font-weight: 600;
+    color: #dfe2ea;
+}
+
+.screen_container > .info-container > .info-wrapper  {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+.screen_container > .info-container > .info-wrapper > div {
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: block;
+
+    border-radius: 50%;
+    background-clip: content-box,border-box;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#141517),to(#141517)),-webkit-gradient(linear,left top,left bottom,from(#00ffa3),to(#027f80));
+    background-image: linear-gradient(#141517,#141517),linear-gradient(180deg,#00ffa3,#027f80);
+    position: relative;
+
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.profile-container:hover {
+    padding: 4px;
+    margin: -2px;
+}
+
+.profile-container > img {
+    border-radius: 50%;
+    margin: 3px;
+    background-color: transparent;
+
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.info-container > .info-wrapper > div > .channel-info {
+    margin-left: 8px;
+}
+
+.info-container > .info-wrapper > div > .channel-info > a {
+    display: block;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .title {
+    color: #dfe2ea;
+    font-size: 20px;
+    font-weight: 600;
+
+    border-radius: 6px;
+    padding: 3px 5px;
+
+    width: max-content;
+    cursor: pointer;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .title:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.info-container > .info-wrapper > div > .channel-info > .game {
+    color: rgba(0,255,163,.9);
+    font-weight: 600;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 2px;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .game:hover {
+    color: rgba(0,255,163,.7);
+    cursor: pointer;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .game > img {
+    margin-right: 6px;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .misc-texts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: #9da5b6;
+    font-size: 14px;
+
+    /* margin-top: 2px; */
+}
+
+.info-container > .info-wrapper > div > .channel-info > .misc-texts > .misc-people {
+    color: #d3d8e2;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .misc-texts > .misc-people-save {
+    position: relative;
+    padding-left: 14px;
+
+    margin-right: 8px;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .misc-texts > .misc-people-save::before {
+    background-color: hsla(0,0%,100%,.2);
+    border-radius: 50%;
+    content: "";
+    height: 2px;
+    left: 6px;
+    position: absolute;
+    top: 8px;
+    width: 2px;
+}
+
+.info-container > .info-wrapper > div > .channel-info > .misc-texts > .misc-time {
+    padding: 3px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
 }

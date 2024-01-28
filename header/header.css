@@ -1,6 +1,9 @@
 .header-main {
     position: sticky;
 
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 60px;
 
@@ -12,6 +15,10 @@
 
     padding: 0 10px;
     box-sizing: border-box;
+
+    background-color: #141517;
+
+    z-index: 5;
 }
 
 .header-main > .left-menu > a > img {
