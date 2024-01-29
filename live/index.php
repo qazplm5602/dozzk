@@ -36,6 +36,8 @@
             </div>
         </div>
     </div>
+
+    <?php include DOZZK_ROOT.'/tail/tail.php'; ?>
 </section>
 
 <!-- 채팅창 -->
