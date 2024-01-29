@@ -29,6 +29,8 @@
 
     padding: 13px 15px;
     box-sizing: border-box;
+
+    margin-bottom: 10px;
 }
 
 .screen_container > .info-container > .info-title {

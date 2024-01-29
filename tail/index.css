@@ -2,10 +2,32 @@
     width: 100%;
 
     padding: 0 15px;
-    padding-top: 10px;
+    padding-top: 25px;
     padding-bottom: 50px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tail-main > a {
+    font-size: 12px;
+    color: gray;
+    display: block;
+
+    padding: 0 10px;
+
+    width: max-content;
+}
+
+.tail-main > a:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tail-main > a:hover {
+    text-decoration-line: underline;
 }
