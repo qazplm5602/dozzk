@@ -95,6 +95,7 @@
 
     border-radius: 6px;
     padding: 3px 5px;
+    margin-left: -6px;
 
     width: max-content;
     cursor: pointer;
@@ -114,6 +115,8 @@
     align-items: center;
 
     margin-top: 2px;
+
+    width: max-content;
 }
 
 .info-container > .info-wrapper > div > .channel-info > .game:hover {
@@ -142,6 +145,7 @@
 
 .info-container > .info-wrapper > div > .channel-info > .misc-texts > .misc-people-save {
     position: relative;
+
     padding-left: 14px;
 
     margin-right: 8px;
@@ -162,4 +166,63 @@
     padding: 3px 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
+}
+
+.info-container > .info-wrapper > .info-right > button {
+    display: flex;
+    align-items: center;
+    
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.info-container > .info-wrapper > .info-right > button > span {
+    margin-left: 5px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.info-container > .info-wrapper > .info-right > button > img {
+    height: 100%;
+}
+
+.info-container > .info-wrapper > .info-right > button:not(:first-child) {
+    margin-left: 6px;
+}
+
+.info-container > .info-wrapper > .info-right > button.follow {
+    background-color: rgba(0,255,163,.9);
+}
+
+.info-container > .info-wrapper > .info-right > button.follow:hover {
+    background-color: rgba(0,255,163,.7);
+}
+
+.info-container > .info-wrapper > .info-right > button.misc {
+    border-radius: 50%;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #2e3033;
+
+    padding: 8px;
+}
+
+.info-container > .info-wrapper > .info-right > button.misc > img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.info-container > .info-wrapper > .info-right > button.misc:hover {
+    background-color: #3f4144;
+}
+
+.info-container > .info-wrapper > .info-right > button.misc:hover > img {
+    opacity: 1;
 }

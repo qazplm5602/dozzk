@@ -29,8 +29,10 @@
                     </div>
                 </div>
             </div>
-            <div class="info-right">
 
+            <div class="info-right">
+                <button class="follow"><img src="<?php echo DOZZK_URL; ?>/assets/heart.svg"><span>팔로우</span></button>
+                <button class="misc"><img src="<?php echo DOZZK_URL; ?>/assets/other.svg"></button>
             </div>
         </div>
     </div>
