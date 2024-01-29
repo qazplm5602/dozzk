@@ -42,4 +42,21 @@
 
 <!-- 채팅창 -->
 <div class="chat-wrapper">
+    <div class="chat-header">
+        <button><img src="<?php echo DOZZK_URL; ?>/assets/upload.svg"></button>
+        <span>채팅</span>
+        <button class="rotate"><img src="<?php echo DOZZK_URL; ?>/assets/other.svg"></button>
+    </div>
+
+    <section class="chat-content">
+        
+    </section>
+
+    <div class="chat-tail">
+        <div class="chat-in">
+            <input placeholder="채팅에 참여하려면 로그인 해주세요" type="text">
+            <!-- <button></button> -->
+        </div>
+        <button class="chat-send">채팅</button>
+    </div>
 </div>
