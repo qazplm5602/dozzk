@@ -1,5 +1,30 @@
 <?php
+error_reporting( E_ALL );
+ini_set( "display_errors", 1 );
+?>
+
+<?php
     include_once '_common.php';
+
+    $channelID = $_GET["id"];
+
+    $error_title = "존재하지 않는 채널입니다.";
+    $error_why = "지금 입력하신 주소의 페이지는</br>사라졌거나 다른 페이지로 변경되었습니다.</br>주소를 다시 확인해주세요.";
+    
+    if (!isset($channelID) || $channelID === "") {
+        die( include(DOZZK_ROOT.'/error/error.php') );
+    }
+
+    $result = sql_fetch("SELECT title, game FROM dozzk_channel WHERE id = \"$channelID\"");
+    if (is_null($result)) {
+        die( include(DOZZK_ROOT.'/error/error.php') );
+    }
+
+    unset($error_title);
+    unset($error_why);
+?>
+
+<?php
     include DOZZK_ROOT.'/header/head.php';
     include DOZZK_ROOT.'/toolbar/toolbar.php';
 
@@ -49,7 +74,7 @@
     </div>
 
     <section class="chat-content">
-        <div><span style="color:greenyellow;">도미임</span>TEST</div>
+        <!-- <div><span style="color:greenyellow;">도미임</span>TEST</div> -->
     </section>
 
     <div class="chat-tail">
