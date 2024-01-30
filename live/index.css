@@ -249,6 +249,8 @@
 
     box-sizing: border-box;
     padding: 0 5px;
+
+    flex-shrink: 0;
 }
 
 .chat-wrapper > .chat-header > span {
@@ -287,6 +289,39 @@
 .chat-wrapper > .chat-content {
     flex-grow: 1;
     overflow: auto;
+    
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.chat-wrapper > .chat-content > div {
+    padding: 5px 6px;
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    width: max-content;
+    max-width: 100%;
+
+    cursor: pointer;
+}
+
+.chat-wrapper > .chat-content > div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.chat-wrapper > .chat-content > div > span {
+    margin-right: 5px;
+    padding: 2px 4px;
+    border-radius: 8px;
+}
+
+.chat-wrapper > .chat-content > div > span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .chat-wrapper > .chat-tail {
