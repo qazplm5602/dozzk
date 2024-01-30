@@ -1,0 +1,57 @@
+.screen_container {
+    position: relative;
+    height: calc(100% - 60px);
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    padding: 0;
+}
+
+.error-container {
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-container > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.error-container > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #dfe2ea;
+    margin-top: 10px;
+    
+    text-align: center;
+}
+
+.error-container > .why {
+    color: #9da5b6;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.error-container > a {
+    padding: 6px 18px;
+    border-radius: 30px;
+
+    background-color: rgb(46, 48, 51);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-sizing: border-box;
+
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.error-container > a:hover {
+    background-color: rgb(66, 68, 71);
+}
