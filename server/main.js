@@ -1,10 +1,15 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 
 global.CONFIG = require("./config.json");
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors({
+    origin: "http://localhost",
+    credentials: true,
+}));
 
 const server = app.listen(3000, () => console.log("API 3000 열림"));
 

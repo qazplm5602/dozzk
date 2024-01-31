@@ -10,6 +10,7 @@
 ?>
 <title>도지직 - DOZZK</title>
 
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
     // 전역 변수 선언
     var DOZZK_API = "<?php echo DOZZK_API; ?>";

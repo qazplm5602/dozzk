@@ -308,6 +308,8 @@
     max-width: 100%;
 
     cursor: pointer;
+
+    word-break: break-all;
 }
 
 .chat-wrapper > .chat-content > div:hover {
