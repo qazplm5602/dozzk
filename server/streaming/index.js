@@ -59,6 +59,7 @@ nms.check('prePublish', async (args) => {
         return false;
     }
 
+    args.startDate = new Date();
     live_players[channelID] = args;
     return true;
 });
@@ -72,3 +73,12 @@ nms.on('donePublish', (id, StreamPath, args) => {
 });
 
 nms.run();
+
+exports.getStreamInfo = function(streamer) {
+  const data = live_players[streamer];
+  if (data === undefined) return false;
+
+  return {
+    date: data.startDate
+  }
+}

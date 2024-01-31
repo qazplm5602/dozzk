@@ -23,7 +23,7 @@ function getRandom(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
-module.exports = function(server, express) {
+exports.init = function(server, express) {
     const ws = new webSocket.Server({ server, path: "/chat" });
     ws.on("connection", (connection, req) => {
         const param = new URLSearchParams(req.url.substring(req.url.indexOf('?') + 1));
@@ -90,7 +90,7 @@ module.exports = function(server, express) {
     });
 
     express.post("/chat/register", function(req, res) {
-        if (req.body.secret !== "903wureijofsohu4tyeeregb4e8sodegfruiyhjr") {
+        if (req.body.secret !== CONFIG.secret) {
             return res.sendStatus(401);
         }
 
@@ -107,6 +107,11 @@ module.exports = function(server, express) {
 
         res.send(token);
     });
+}
+
+exports.getChannelClients = function(channel) {
+    if (rooms[channel] === undefined) return 0;
+    return Object.keys(rooms[channel]).length;
 }
 
 function broadcastChat(channel, id, data) {

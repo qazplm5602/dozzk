@@ -5,8 +5,16 @@
     echo '<link rel="stylesheet" href="'.DOZZK_URL.'index.css">';
 
     echo '<link rel="stylesheet" href="'.DOZZK_URL.'/header/header.css">';
+
+    include_once DOZZK_ROOT.'/config.php';
 ?>
 <title>도지직 - DOZZK</title>
+
+<script>
+    // 전역 변수 선언
+    var DOZZK_API = "<?php echo DOZZK_API; ?>";
+    var DOZZK_LIVE_URL = "<?php echo DOZZK_LIVE_URL; ?>";
+</script>
 
 <header class="header-main">
     <section class="left-menu">
