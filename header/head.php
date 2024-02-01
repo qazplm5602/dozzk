@@ -17,6 +17,21 @@
     var DOZZK_LIVE_URL = "<?php echo DOZZK_LIVE_URL; ?>";
 </script>
 
+<script>
+    $(function() {
+        $("body").click(function() {
+            $(".profile-context").hide();
+        });
+        $(".user-avater").click(function(event) {
+            event.stopPropagation();
+            $(".profile-context").toggle();
+        });
+        $(".profile-context").click(function(event) {
+            event.stopPropagation();
+        });
+    });
+</script>
+
 <header class="header-main">
     <section class="left-menu">
         <a href="https://dozzk.domi.kr">
@@ -30,21 +45,25 @@
     </div>
 
     <section class="right-menu">
-        <a href="https://domi.kr/bbs/login.php"><button class="text-button">로그인</button></a>
-        <button class="user-avater">
-            <img src="https://nng-phinf.pstatic.net/MjAyMjA2MTdfNzcg/MDAxNjU1NDYwOTk4MzIx.2GtboKl1AANbxW8mwf7_-3rl1joA5z70GdLSuhVzWssg.ubvmA6JPVkX2fRl0DLLBKY9eBbL2Gh3cN03_MMAwnuAg.PNG/1.png?type=f120_120_na">
-            <span class="guide-box">프로필</span>
-        </button>
+        <?php if ($is_member) { ?>
+            <button class="user-avater">
+                <?php echo get_member_profile_img($member["mb_id"]); ?>
+                <span class="guide-box">프로필</span>
+            </button>
+        <?php } else { ?>
+            <a href="https://domi.kr/bbs/login.php"><button class="text-button">로그인</button></a>
+        <?php } ?>
     </section>
 
-    <div class="profile-context">
+    <?php if ($is_member) { ?>
+    <div class="profile-context" style="display:none;">
         <a href="#">
             <div class="myprofile-container">
-                <div class="myprofile-image"><img src="https://nng-phinf.pstatic.net/MjAyMjA2MTdfNzcg/MDAxNjU1NDYwOTk4MzIx.2GtboKl1AANbxW8mwf7_-3rl1joA5z70GdLSuhVzWssg.ubvmA6JPVkX2fRl0DLLBKY9eBbL2Gh3cN03_MMAwnuAg.PNG/1.png?type=f120_120_na"></div>
+                <div class="myprofile-image"><?php echo get_member_profile_img($member["mb_id"]); ?></div>
             
                 <div class="myprofile-texts">
                     <span class="sub">도미WEB 프로필</span>
-                    <span class="name">도미임</span>
+                    <span class="name"><?php echo $member["mb_nick"]; ?></span>
                 </div>
             </div>
         </a>
@@ -55,7 +74,6 @@
             <img src="<?php echo DOZZK_URL; ?>/assets/logout.svg">
             로그아웃
         </div></a>
-
-
     </div>
+    <?php } ?>
 </header>
