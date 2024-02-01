@@ -31,5 +31,31 @@
 
     <section class="right-menu">
         <a href="https://domi.kr/bbs/login.php"><button class="text-button">로그인</button></a>
+        <button class="user-avater">
+            <img src="https://nng-phinf.pstatic.net/MjAyMjA2MTdfNzcg/MDAxNjU1NDYwOTk4MzIx.2GtboKl1AANbxW8mwf7_-3rl1joA5z70GdLSuhVzWssg.ubvmA6JPVkX2fRl0DLLBKY9eBbL2Gh3cN03_MMAwnuAg.PNG/1.png?type=f120_120_na">
+            <span class="guide-box">프로필</span>
+        </button>
     </section>
+
+    <div class="profile-context">
+        <a href="#">
+            <div class="myprofile-container">
+                <div class="myprofile-image"><img src="https://nng-phinf.pstatic.net/MjAyMjA2MTdfNzcg/MDAxNjU1NDYwOTk4MzIx.2GtboKl1AANbxW8mwf7_-3rl1joA5z70GdLSuhVzWssg.ubvmA6JPVkX2fRl0DLLBKY9eBbL2Gh3cN03_MMAwnuAg.PNG/1.png?type=f120_120_na"></div>
+            
+                <div class="myprofile-texts">
+                    <span class="sub">도미WEB 프로필</span>
+                    <span class="name">도미임</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="proile-line"></div>
+
+        <a href="#"><div class="profile-button">
+            <img src="<?php echo DOZZK_URL; ?>/assets/logout.svg">
+            로그아웃
+        </div></a>
+
+
+    </div>
 </header>
