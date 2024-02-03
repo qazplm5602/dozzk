@@ -1,0 +1,17 @@
+.lives-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(201, 206, 220);
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lives-contents {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+}
