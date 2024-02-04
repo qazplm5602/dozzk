@@ -1,0 +1,110 @@
+.video_card-container {
+    position: relative;
+
+    width: 33.33333%;
+    height: 33.33333%;
+}
+
+.video_card-container > a > .video_card-thumbnail {
+    position: relative;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video_card-container > a > .video_card-thumbnail > img {
+    width: 100%;
+}
+
+.video_card-container > a > .video_card-thumbnail > .info {
+    position: absolute;
+    
+    top: 6px;
+    left: 8px;
+
+    display: flex;
+}
+
+.video_card-container > a > .video_card-thumbnail > .info > div {
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+}
+
+.video_card-container > a > .video_card-thumbnail > .info > .live {
+    background-color: red;
+    font-weight: 600;
+    
+    padding: 1px 6px;
+}
+
+.video_card-container > a > .video_card-thumbnail > .info > .count {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    margin-left: 5px;
+}
+
+.video_card-container > .video_card-channel {
+    display: flex;
+    margin-top: 10px;
+}
+
+.video_card-container > .video_card-channel > .icon {
+    margin-right: 8px;
+}
+
+.video_card-container > .video_card-channel > .icon > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.video_card-container > .video_card-channel > .info {
+    flex-grow: 1;
+}
+
+.video_card-container > .video_card-channel > .info > a {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+}
+
+.video_card-container > .video_card-channel > .info > .channel-title {
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+.video_card-container > .video_card-channel > .info > .channel-name {
+    margin-left: -5px;
+    padding: 2px 5px;
+
+    color: #9da5b6;
+    font-weight: 600;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+.video_card-container > .video_card-channel > .info > .channel-name:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.video_card-container > .video_card-channel > .info > .channel-game {
+    color: #9da5b6;
+    background-color: rgba(46,48,51,.6);
+
+    padding: 3px 5px;
+    border-radius: 3px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    margin-top: 3px;
+}
