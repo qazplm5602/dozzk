@@ -13,7 +13,7 @@
     <div class="category-line"></div>
 
     <div class="category-text"><span>탐색</span></div>
-    <a class="link-button" href="#">
+    <a class="link-button" href="/lives">
         <button>
             <img src="https://domi.kr/img/domi_logo.png">
             <div>전체 라이브</div>
