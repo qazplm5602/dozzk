@@ -70,7 +70,7 @@
 
         <div class="proile-line"></div>
 
-        <a href="#"><div class="profile-button">
+        <a href="https://domi.kr/bbs/logout.php"><div class="profile-button">
             <img src="<?php echo DOZZK_URL; ?>/assets/logout.svg">
             로그아웃
         </div></a>
