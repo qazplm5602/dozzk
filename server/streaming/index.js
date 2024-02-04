@@ -82,3 +82,7 @@ exports.getStreamInfo = function(streamer) {
     date: data.startDate
   }
 }
+
+exports.getLiveStreams = function() {
+  return Object.keys(live_players);
+}

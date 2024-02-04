@@ -33,3 +33,7 @@ app.get("/channel/info/:channel", function(req, res) {
         clients: chat.getChannelClients(channel)
     });
 });
+
+app.get("/channel/lives", function(req, res) {
+    res.json(live.getLiveStreams());
+});
