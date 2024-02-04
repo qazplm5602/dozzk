@@ -3,6 +3,7 @@ const ffmpeg = require('fluent-ffmpeg');
 ffmpeg.setFfmpegPath("./streaming/ffmpeg/bin/ffmpeg.exe");
 
 const cacheImageBuffers = {};
+const waitUsers = {};
 
 exports.init = function(express) {
     express.get("/channel/thumbnail/:channel", function(req, res) {
@@ -11,6 +12,16 @@ exports.init = function(express) {
         const cacheImg = cacheImageBuffers[channel];
 
         if (cacheImg === false) {
+            if (waitUsers[channel] === undefined) waitUsers[channel] = [];
+            waitUsers[channel].push(function() {
+                // 다시 불러오기
+                const reCacheImg = cacheImageBuffers[channel];
+                if (reCacheImg === undefined) {
+                    res.sendStatus(500);
+                } else {
+                    res.set("Content-type", "image/jpeg").send(reCacheImg[0]);
+                }
+            });
             return;
         }
 
@@ -22,6 +33,7 @@ exports.init = function(express) {
                 m3u8Contents = fs.readFileSync(`./media/live/${channel}/index.m3u8`);
             } catch(err) {
                 cacheImageBuffers[channel] = undefined;
+                CallbackResultImage(channel);
                 return res.sendStatus(404);
             }
             
@@ -39,16 +51,16 @@ exports.init = function(express) {
             .output("./thumbnail/cache/"+outputFilename)
             .on("error", () => {
                 cacheImageBuffers[channel] = undefined;
+                CallbackResultImage(channel);
                 res.sendStatus(500);
             })
             .on('end', () => {
-                console.log('프레임 변환 완료');
-                
                 let jpgContents;
                 try {
                     jpgContents = fs.readFileSync("./thumbnail/cache/"+outputFilename);
                 } catch {
                     cacheImageBuffers[channel] = undefined;
+                    CallbackResultImage(channel);
                     res.sendStatus(500);
                     return;
                 }
@@ -57,6 +69,7 @@ exports.init = function(express) {
 
                 cacheImageBuffers[channel] = [jpgContents, new Date()];
                 res.set("Content-type", "image/jpeg").send(jpgContents);
+                CallbackResultImage(channel);
             })
             .run();
 
@@ -65,6 +78,13 @@ exports.init = function(express) {
 
         res.set("Content-type", "image/jpeg").send(cacheImg[0]);
     });
+}
+
+function CallbackResultImage(channel) {
+    if (waitUsers[channel] === undefined) return;
+    
+    waitUsers[channel].forEach(cb => cb());
+    waitUsers[channel] = undefined;
 }
 
 const generateRandomString = (num) => {
