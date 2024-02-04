@@ -14,6 +14,7 @@ app.use(cors({
 const server = app.listen(3000, () => console.log("API 3000 열림"));
 
 const live = require("./streaming");
+require("./thumbnail").init(app);
 const chat = require("./chat")
 chat.init(server, app);
 
