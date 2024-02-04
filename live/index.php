@@ -14,8 +14,8 @@
     if (is_null($result)) {
         die( include(DOZZK_ROOT.'/error/error.php') );
     }
-    $member = get_member($channelID);
-    if (is_null($member)) {
+    $streamer = get_member($channelID);
+    if (is_null($streamer)) {
         die( include(DOZZK_ROOT.'/error/error.php') );
     }
 
@@ -50,7 +50,7 @@
                 </a>
 
                 <div class="channel-info">
-                    <a href="#" class="title"><?php echo $member["mb_nick"]; ?></a>
+                    <a href="#" class="title"><?php echo $streamer["mb_nick"]; ?></a>
                     <a href="#" class="game"><img src="<?php echo DOZZK_URL; ?>/assets/game.svg"><?php echo (is_null($result["game"]) ? "talk" : $result["game"]." 플레이 중"); ?></a>
                     <div class="misc-texts">
                         <div class="misc-people">현재 3,482 시청중</div>
