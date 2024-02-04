@@ -4,8 +4,8 @@
     include DOZZK_ROOT.'/toolbar/toolbar.php';
 ?>
 
-<link rel="stylesheet" href="<?php echo DOZZK_URL; ?>/lives/index.css">
 <link rel="stylesheet" href="<?php echo DOZZK_URL; ?>/lives/video_card.css">
+<link rel="stylesheet" href="<?php echo DOZZK_URL; ?>/lives/index.css">
 
 <section class="screen_container">
     <div class="lives-title">라이브 영상</div>

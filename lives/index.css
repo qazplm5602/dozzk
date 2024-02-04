@@ -9,9 +9,29 @@
 
 .lives-contents {
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     box-sizing: border-box;
 
     display: flex;
     flex-wrap: wrap;
+
+    padding-left: 14px;
+}
+
+.lives-contents > .video_card-container {
+    padding: 0 14px 30px 0;
+
+    width: 31%;
+}
+
+@media screen and (min-width: 1490px) {
+    .lives-contents > .video_card-container {
+        width: 23%;
+    }
+}
+
+@media screen and (min-width: 1790px) {
+    .lives-contents > .video_card-container {
+        width: 19%;
+    }
 }
