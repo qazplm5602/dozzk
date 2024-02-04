@@ -35,5 +35,11 @@ app.get("/channel/info/:channel", function(req, res) {
 });
 
 app.get("/channel/lives", function(req, res) {
-    res.json(live.getLiveStreams());
+    const result = {};
+    
+    for (const [channel, data] of Object.entries(live.getLiveStreams())) {
+        result[channel] = { clients: chat.getChannelClients(channel) };
+    }
+
+    res.json(result);
 });

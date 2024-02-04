@@ -84,5 +84,5 @@ exports.getStreamInfo = function(streamer) {
 }
 
 exports.getLiveStreams = function() {
-  return Object.keys(live_players);
+  return live_players;
 }
